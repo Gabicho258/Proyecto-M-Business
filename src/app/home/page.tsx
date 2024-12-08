@@ -8,7 +8,10 @@ export default function Home() {
         Administración de inscripciones de deportes
       </h1>
       <div>
-        <HomeItem title="Hola" imageUrl="asdasd" />
+        <HomeItem
+          title="Fichas de inscripción"
+          imageUrl="https://raw.githubusercontent.com/Gabicho258/Proyecto-M-Business/refs/heads/master/src/assets/ficha.png"
+        />
       </div>
     </main>
   );
