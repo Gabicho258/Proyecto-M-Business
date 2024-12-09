@@ -3,7 +3,9 @@ import { NextResponse } from "next/server";
 import * as yup from "yup";
 
 export async function GET() {
-  const fichasInscripcion = await prisma.fichaInscripcion.findMany();
+  const fichasInscripcion = await prisma.fichaInscripcion.findMany({
+    include: { Deporte: true },
+  });
 
   return NextResponse.json(fichasInscripcion);
 }
