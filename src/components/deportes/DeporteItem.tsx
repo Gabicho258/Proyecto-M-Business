@@ -36,7 +36,7 @@ export const DeporteItem = ({ deporte }: Props) => {
           <strong>Estado</strong>
           <span>
             {DepEstReg === "A" && "Activo"}
-            {DepEstReg === "I" && "Inactivo"} {DepEstReg === "*" && "Elimnado"}
+            {DepEstReg === "I" && "Inactivo"} {DepEstReg === "*" && "Eliminado"}
           </span>
         </div>
       </div>

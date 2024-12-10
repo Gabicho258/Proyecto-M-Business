@@ -57,7 +57,7 @@ export const FichaItem = ({ ficha }: Props) => {
           <strong>Estado</strong>
           <span>
             {FicEstReg === "A" && "Activo"}
-            {FicEstReg === "I" && "Inactivo"} {FicEstReg === "*" && "Elimnado"}
+            {FicEstReg === "I" && "Inactivo"} {FicEstReg === "*" && "Eliminado"}
           </span>
         </div>
         <div className="w-5/12 flex flex-col items-center bg-[#3473B1] rounded-lg text-white py-2 mt-2 ">

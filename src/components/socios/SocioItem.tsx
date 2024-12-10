@@ -36,7 +36,7 @@ export const SocioItem = ({ socio }: Props) => {
           <strong>Estado</strong>
           <span>
             {SocEstReg === "A" && "Activo"}
-            {SocEstReg === "I" && "Inactivo"} {SocEstReg === "*" && "Elimnado"}
+            {SocEstReg === "I" && "Inactivo"} {SocEstReg === "*" && "Eliminado"}
           </span>
         </div>
       </div>
