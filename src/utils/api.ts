@@ -1,8 +1,8 @@
 import { Deporte, FichaInscripcion, Socio } from "@prisma/client";
 
-// const API_URL = "http://localhost:3000";
+const API_URL = "https://proyecto-m-business.vercel.app";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+// const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
 // Socios Endpoints
 
