@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { FichasContent } from "@/components/fichas/FichasContent";
 import { getFichasIncripcion } from "@/utils/api";
 import { Metadata } from "next";

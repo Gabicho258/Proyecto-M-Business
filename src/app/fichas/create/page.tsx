@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { FormCreateFicha } from "@/components/fichas/FormCreateFicha";
 import { getDeportes, getFichasIncripcion, getSocios } from "@/utils/api";
 import { Metadata } from "next";

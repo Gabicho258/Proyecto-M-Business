@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { FormEditFicha } from "@/components/fichas/FormEditFicha";
 import { getDeportes, getFichaInscripcionById, getSocios } from "@/utils/api";
 import { Metadata } from "next";

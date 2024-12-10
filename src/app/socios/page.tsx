@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { SociosContent } from "@/components/socios/SociosContent";
 import { getSocios } from "@/utils/api";
 import { Metadata } from "next";

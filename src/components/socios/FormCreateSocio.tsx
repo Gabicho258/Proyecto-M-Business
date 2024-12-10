@@ -14,9 +14,12 @@ export const FormCreateSocio = ({ socios }: Props) => {
   const [socioName, setSocioName] = useState("");
   const [socioLastName, setSocioLastName] = useState("");
 
-  const lastSocio = socios.reduce((max, current) => {
-    return current.SocCod > max.SocCod ? current : max;
-  });
+  const lastSocio =
+    socios.length === 0
+      ? { SocCod: 0 }
+      : socios.reduce((max, current) => {
+          return current.SocCod > max.SocCod ? current : max;
+        });
 
   const handleGuardar = async () => {
     if (socioName && socioLastName) {

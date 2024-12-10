@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { FormEditSocio } from "@/components/socios/FormEditSocio";
 import { getSocioById } from "@/utils/api";
 import { Metadata } from "next";

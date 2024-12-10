@@ -18,9 +18,12 @@ export const FormCreateFicha = ({ deportes, fichas, socios }: Props) => {
   const [fechaInicio, setFechaInicio] = useState("");
   const [monto, setMonto] = useState("");
 
-  const lastFichaInscripcion = fichas.reduce((max, current) => {
-    return current.FicNum > max.FicNum ? current : max;
-  });
+  const lastFichaInscripcion =
+    fichas.length === 0
+      ? { FicNum: 0 }
+      : fichas.reduce((max, current) => {
+          return current.FicNum > max.FicNum ? current : max;
+        });
 
   const handleGuardar = async () => {
     if (socio && deporte && fechaInicio && monto) {

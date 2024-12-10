@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { FormCreateSocio } from "@/components/socios/FormCreateSocio";
 import { getSocios } from "@/utils/api";
 import { Metadata } from "next";

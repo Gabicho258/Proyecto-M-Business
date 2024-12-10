@@ -1,7 +1,8 @@
+export const dynamic = "force-dynamic";
+
 import { FormCreateDeporte } from "@/components/deportes/FormCreateDeporte";
 import { getDeportes } from "@/utils/api";
 import { Metadata } from "next";
-import React from "react";
 
 export const metadata: Metadata = {
   title: "Nuevo deporte",

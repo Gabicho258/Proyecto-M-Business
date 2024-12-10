@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { DeportesContent } from "@/components/deportes/DeportesContent";
 import { getDeportes } from "@/utils/api";
 import { Metadata } from "next";

@@ -13,9 +13,12 @@ interface Props {
 export const FormCreateDeporte = ({ deportes }: Props) => {
   const [deporte, setDeporte] = useState("");
 
-  const lastDeporte = deportes.reduce((max, current) => {
-    return current.DepCod > max.DepCod ? current : max;
-  });
+  const lastDeporte =
+    deportes.length === 0
+      ? { DepCod: 0 }
+      : deportes.reduce((max, current) => {
+          return current.DepCod > max.DepCod ? current : max;
+        });
 
   const handleGuardar = async () => {
     if (deporte) {

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { FormEditDeporte } from "@/components/deportes/FormEditDeporte";
 import { getDeporteById } from "@/utils/api";
 import { Metadata } from "next";
