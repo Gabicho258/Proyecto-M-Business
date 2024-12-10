@@ -1,4 +1,5 @@
 import { Deporte } from "@prisma/client";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -8,7 +9,10 @@ interface Props {
 export const DeporteItem = ({ deporte }: Props) => {
   const { DepCod, DepEstReg, DepNom } = deporte;
   return (
-    <div className="w-full flex flex-col text-sm border border-[#003366] rounded-xl my-2 py-4 px-4 text-[#4e4e4e]">
+    <Link
+      className="w-full flex flex-col text-sm border border-[#003366] rounded-xl my-2 py-4 px-4 text-[#4e4e4e]"
+      href={`deportes/${DepCod}`}
+    >
       <div className="flex flex-row w-full ">
         <span className="w-full">
           <strong>Código de deporte: </strong>{" "}
@@ -36,6 +40,6 @@ export const DeporteItem = ({ deporte }: Props) => {
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

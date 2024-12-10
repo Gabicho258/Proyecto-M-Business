@@ -1,4 +1,5 @@
 import { FichaConDeporte } from "@/utils/api";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -18,7 +19,10 @@ export const FichaItem = ({ ficha }: Props) => {
   } = ficha;
 
   return (
-    <div className="w-full flex flex-col text-sm border border-[#003366] rounded-xl my-2 py-4 px-4 text-[#4e4e4e]">
+    <Link
+      className="w-full flex flex-col text-sm border border-[#003366] rounded-xl my-2 py-4 px-4 text-[#4e4e4e]"
+      href={`/fichas/${FicNum}`}
+    >
       <div className="flex flex-row w-full ">
         <span className="w-1/2">
           <strong>N° de ficha: </strong>{" "}
@@ -61,6 +65,6 @@ export const FichaItem = ({ ficha }: Props) => {
           <span>S/.{FicMon.toString()}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
