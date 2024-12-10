@@ -1,6 +1,11 @@
 import { HomeItem } from "@/components/HomeItem";
 import React from "react";
 
+export const metadata = {
+  title: "Administración de inscripciones de deportes",
+  description: "Administración de inscripciones de deportes",
+};
+
 const listItems = [
   {
     title: "Fichas de inscripción",
