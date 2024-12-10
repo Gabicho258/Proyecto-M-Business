@@ -31,7 +31,7 @@ export const FormEditSocio = ({ socio, isEditing }: Props) => {
   const [buttons, setButtons] = useState<ChangeStateButton[]>();
 
   const handleGuardar = async () => {
-    if (socioNom) {
+    if (socioNom.trim() !== "") {
       const socioToUpdate = {
         SocNom: socioNom,
       };

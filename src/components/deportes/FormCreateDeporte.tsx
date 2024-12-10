@@ -21,7 +21,7 @@ export const FormCreateDeporte = ({ deportes }: Props) => {
         });
 
   const handleGuardar = async () => {
-    if (deporte) {
+    if (deporte.trim() !== "") {
       const deporteToCreate = {
         DepNom: deporte,
       };

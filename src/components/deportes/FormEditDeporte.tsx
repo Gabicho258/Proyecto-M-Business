@@ -31,7 +31,7 @@ export const FormEditDeporte = ({ deporte, isEditing }: Props) => {
   const [buttons, setButtons] = useState<ChangeStateButton[]>();
 
   const handleGuardar = async () => {
-    if (deporteNom) {
+    if (deporteNom.trim() !== "") {
       const deporteToUpdate = {
         DepNom: deporteNom,
       };

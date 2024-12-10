@@ -22,7 +22,7 @@ export const FormCreateSocio = ({ socios }: Props) => {
         });
 
   const handleGuardar = async () => {
-    if (socioName && socioLastName) {
+    if (socioName.trim() !== "" && socioLastName.trim() !== "") {
       const socioToCreate = {
         SocNom: `${socioName.trim()} ${socioLastName.trim()}`,
       };

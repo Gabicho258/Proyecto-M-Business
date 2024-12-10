@@ -145,6 +145,7 @@ export const FormCreateFicha = ({ deportes, fichas, socios }: Props) => {
         </label>
         <input
           type="number"
+          min={0}
           value={monto}
           onChange={(e) => setMonto(e.target.value)}
           placeholder="S/. 0.00"

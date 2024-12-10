@@ -226,6 +226,7 @@ export const FormEditFicha = ({
         <input
           type="number"
           value={monto}
+          min={0}
           onChange={(e) => setMonto(e.target.value)}
           placeholder="S/. 0.00"
           className="w-full border rounded-lg px-3 py-2 text-sm"
