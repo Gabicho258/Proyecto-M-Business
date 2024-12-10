@@ -26,7 +26,7 @@ export default async function Deportes() {
       <h1 className="text-xl w-60 text-center mt-8 mb-6  font-semibold">
         Deportes
       </h1>
-      <div className=" border-solid border-black w-74 flex flex-col items-center ">
+      <div className=" border-solid border-black w-80 flex flex-col items-center ">
         <DeportesContent data={data} />
       </div>
     </main>

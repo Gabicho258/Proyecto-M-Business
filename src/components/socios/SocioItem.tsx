@@ -20,7 +20,7 @@ export const SocioItem = ({ socio }: Props) => {
         </span>
       </div>
       <div className="flex flex-row w-full">
-        <span className="w-full">
+        <span className="w-full truncate">
           <strong>Nombre:</strong> {SocNom}
         </span>
       </div>
