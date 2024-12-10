@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Socio {
+  SocCod    Int    @id @default(autoincrement())
+  SocNom    String
+  SocEstReg String @default("A")
+
+  FichasInscripcion FichaInscripcion[]
+
+  @@map("SOCIOS")
+}
+
+model Deporte {
+  DepCod    Int    @id @default(autoincrement())
+  DepNom    String
+  DepEstReg String @default("A")
+
+  FichasInscripcion FichaInscripcion[]
+
+  @@map("TIPOS_DEPORTE")
+}
+
+model FichaInscripcion {
+  FicNum    Int      @id @default(autoincrement())
+  FicSocCod Int
+  FicDepCod Int
+  FicFecDia String
+  FicFecMes String
+  FicFecAno String
+  FicMon    Decimal  @db.Decimal(10, 2)
+  FicEstReg String   @default("A")
+  Socio     Socio?   @relation(fields: [FicSocCod], references: [SocCod])
+  Deporte   Deporte? @relation(fields: [FicDepCod], references: [DepCod])
+
+  @@map("FICHAS_INSCRIPCION")
+}
