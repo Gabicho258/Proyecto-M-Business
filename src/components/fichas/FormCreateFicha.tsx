@@ -77,15 +77,17 @@ export const FormCreateFicha = ({ deportes, fichas, socios }: Props) => {
           <option value="" disabled>
             Selecciona un socio
           </option>
-          {socios?.map((socio) => {
-            return (
-              <option key={socio.SocCod} value={socio.SocCod}>
-                {`SOC-${socio.SocCod.toString().padStart(4, "0")} - ${
-                  socio.SocNom
-                }`}
-              </option>
-            );
-          })}
+          {socios
+            ?.filter((socio) => socio.SocEstReg === "A")
+            .map((socio) => {
+              return (
+                <option key={socio.SocCod} value={socio.SocCod}>
+                  {`SOC-${socio.SocCod.toString().padStart(4, "0")} - ${
+                    socio.SocNom
+                  }`}
+                </option>
+              );
+            })}
         </select>
       </div>
 
@@ -103,15 +105,17 @@ export const FormCreateFicha = ({ deportes, fichas, socios }: Props) => {
           <option value="" disabled>
             Selecciona un deporte
           </option>
-          {deportes?.map((deporte) => {
-            return (
-              <option key={deporte.DepCod} value={deporte.DepCod}>
-                {`DEP-${deporte.DepCod.toString().padStart(4, "0")} - ${
-                  deporte.DepNom
-                }`}
-              </option>
-            );
-          })}
+          {deportes
+            ?.filter((deporte) => deporte.DepEstReg === "A")
+            .map((deporte) => {
+              return (
+                <option key={deporte.DepCod} value={deporte.DepCod}>
+                  {`DEP-${deporte.DepCod.toString().padStart(4, "0")} - ${
+                    deporte.DepNom
+                  }`}
+                </option>
+              );
+            })}
         </select>
       </div>
 
